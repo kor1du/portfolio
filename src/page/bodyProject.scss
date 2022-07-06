@@ -1,0 +1,29 @@
+.App section > .body-project {
+  background: #1b1a17;
+  color: white;
+
+  .title {
+    color: white;
+  }
+
+  img {
+    width: 70vw;
+    max-width: 600px;
+    height: 200px;
+  }
+
+  .carousel-caption {
+    position: static;
+    margin: 20px;
+
+    button {
+      margin: 10px 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      height: 400px;
+    }
+  }
+}

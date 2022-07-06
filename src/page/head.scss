@@ -1,0 +1,115 @@
+.App section > .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 80px);
+
+  .card {
+    width: 90vw;
+    max-width: 400px;
+    height: 400px;
+    perspective: 200000px;
+
+    .item {
+      backface-visibility: hidden;
+      transition: 1s;
+    }
+
+    .front {
+      position: absolute;
+      width: 100%;
+      .background {
+        background-image: url("../img/header-background.jpg");
+        background-size: 100% 100%;
+        height: 120px;
+        width: 100%;
+      }
+
+      .header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+
+        .img-profile {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          position: relative;
+          bottom: 60px;
+          border: 5px solid white;
+          left: 0;
+          right: 0;
+        }
+      }
+
+      .body {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .job {
+          color: gray;
+        }
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+        .introduce {
+          width: 95%;
+        }
+      }
+    }
+
+    .back {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: rotateY(-180deg);
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 50px;
+        font-size: 0.8rem;
+        border-bottom: 1px solid gray;
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 270px;
+        padding: 0 10px;
+        h6 {
+          margin: 5px 0px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .footer {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  .card:hover {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+}

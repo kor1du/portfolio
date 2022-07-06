@@ -1,0 +1,66 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.body-project-modal-content {
+  font-family: "Black Han Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+
+  .modal-body {
+    padding: 50px 10px;
+    height: 600px;
+    overflow: scroll;
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    .title {
+      padding: 0 5px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid gray;
+      text-align: center;
+    }
+    .content {
+      font-size: 0.8rem;
+      padding: 0 20px;
+      margin: 40px 0px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .content {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  img {
+    width: 280px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .modal-body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .modal-body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 400px;
+      height: 350px;
+    }
+  }
+}
